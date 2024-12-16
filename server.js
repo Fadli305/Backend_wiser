@@ -22,13 +22,40 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 const articlesRoutes = require('./routes/articles');
 const beritaRoutes = require('./routes/berita');
 const materiRoutes = require('./routes/materi');
-const videosRoutes = require('./routes/videos'); // Jika sudah membuat
+const videosRoutes = require('./routes/videos');
+const penggunaRoutes = require('./routes/penggunaRoutes');
+const gedungRoutes = require('./routes/gedungRoutes');
+const produksiRoutes = require('./routes/produksiRoutes');
+const biayaRoutes = require('./routes/biayaRoutes');
+const pakarRoutes = require('./routes/pakarRoutes');
+const konsultasiRoutes = require('./routes/konsultasiRoutes');
+const riwayatPembayaranRoutes = require('./routes/riwayatPembayaranRoutes');
+const edukasiRoutes = require('./routes/edukasiRoutes');
+const favoritRoutes = require('./routes/favoritRoutes');
+const komunitasRoutes = require('./routes/komunitasRoutes');
+const mediaKomunitasRoutes = require('./routes/mediaKomunitasRoutes');
+const obrolanRoutes = require('./routes/obrolanRoutes');
+const notifikasiRoutes = require('./routes/notifikasiRoutes');
+
 
 // Gunakan routes
 app.use('/api/articles', articlesRoutes);
 app.use('/api/berita', beritaRoutes);
 app.use('/api/materi', materiRoutes);
-app.use('/api/videos', videosRoutes); // Jika sudah membuat
+app.use('/api/videos', videosRoutes);
+app.use('/api/pengguna', penggunaRoutes);
+app.use('/api/gedung', gedungRoutes);
+app.use('/api/produksi', produksiRoutes);
+app.use('/api/biaya', biayaRoutes);
+app.use('/api/pakar', pakarRoutes);
+app.use('/api/konsultasi', konsultasiRoutes);
+app.use('/api/riwayat-pembayaran', riwayatPembayaranRoutes);
+app.use('/api/edukasi', edukasiRoutes);
+app.use('/api/favorit', favoritRoutes);
+app.use('/api/komunitas', komunitasRoutes);
+app.use('/api/media-komunitas', mediaKomunitasRoutes);
+app.use('/api/obrolan', obrolanRoutes);
+app.use('/api/notifikasi', notifikasiRoutes);
 
 // Route dasar
 app.get("/", (req, res) => {
